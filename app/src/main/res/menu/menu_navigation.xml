@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/tab_today" android:title="Today" android:icon="@drawable/ic_today"/>
+    <item android:id="@+id/tab_hour" android:title="Hourly" android:icon="@drawable/ic_hour"/>
+    <item android:id="@+id/tab_daily" android:title="Daily" android:icon="@drawable/ic_daily"/>
+    <item android:id="@+id/tab_search" android:title="Search" android:icon="@drawable/ic_search"/>
+</menu>

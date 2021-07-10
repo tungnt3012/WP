@@ -45,6 +45,13 @@ public class HourlyActivity extends AppCompatActivity {
         hourlies.add(new Hourly("11:00",32,"RealFeel39*",20));
         hourlies.add(new Hourly("11:00",32,"RealFeel39*",20));
         hourlies.add(new Hourly("11:00",32,"RealFeel39*",20));
+        hourlies.add(new Hourly("11:00",32,"RealFeel39*",20));
+        hourlies.add(new Hourly("11:00",32,"RealFeel39*",20));
+        hourlies.add(new Hourly("11:00",32,"RealFeel39*",20));
+        hourlies.add(new Hourly("11:00",32,"RealFeel39*",20));
+        hourlies.add(new Hourly("11:00",32,"RealFeel39*",20));
+        hourlies.add(new Hourly("11:00",32,"RealFeel39*",20));
+
     }
 
 }
