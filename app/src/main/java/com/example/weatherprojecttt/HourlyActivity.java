@@ -20,7 +20,6 @@ public class HourlyActivity extends AppCompatActivity {
     private HourlyAdapter hourlyAdapter;
     private BottomSheetBehavior bottomSheetBehavior;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

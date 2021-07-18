@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.Fragment_Today">
+    tools:context=".Fragments.Fragment_Hour">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/titleHour"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"

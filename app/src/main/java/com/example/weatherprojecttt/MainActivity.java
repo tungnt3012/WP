@@ -2,16 +2,29 @@ package com.example.weatherprojecttt;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
+import com.example.weatherprojecttt.Fragments.Fragment_Hour;
+import com.example.weatherprojecttt.Fragments.Fragment_Search;
+import com.example.weatherprojecttt.Fragments.Fragment_Today;
+import com.example.weatherprojecttt.Model.Today;
 import com.example.weatherprojecttt.ViewPagerAdapter.ViewPagerAdaper;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity {
+import org.json.JSONArray;
+
+import java.util.Objects;
+
+public class MainActivity extends AppCompatActivity implements Fragment_Search.ISendDataTodayListener {
     private ViewPager viewPager;
     private BottomNavigationView bottomNavigationView;
 
@@ -25,11 +38,12 @@ public class MainActivity extends AppCompatActivity {
 
         ViewPagerAdaper adapter = new ViewPagerAdaper(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         viewPager.setAdapter(adapter);
-
+        viewPager.setOffscreenPageLimit(3);
         //handle scroll to fragment
         handleScollFragment(viewPager);
         //handle select bottom nav
         handleSelectBottomNav(bottomNavigationView);
+
     }
 
     private void handleScollFragment(ViewPager viewPager) {
@@ -91,4 +105,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void sendData(Today today) {
+//        Fragment_Today fragment_today = (Fragment_Today) getSupportFragmentManager().findFragmentById(R.id.view);
+        Fragment_Today fragment_today = (Fragment_Today) viewPager.getAdapter().instantiateItem(viewPager, 0);
+//        Fragment_Hour fragment_hour = (Fragment_Hour) viewPager.getAdapter().instantiateItem(viewPager, 1);
+        fragment_today.setData(today);
+//        fragment_hour.setTitle(txt);
+
+    }
 }

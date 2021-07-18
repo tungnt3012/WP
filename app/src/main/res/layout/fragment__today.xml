@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.Fragment_Today">
+    tools:context=".Fragments.Fragment_Today"
+    android:id="@+id/fragmentToday">
 
     <TextView
         android:id="@+id/tvToday"
@@ -23,185 +24,207 @@
         android:textColor="@color/black"
         android:background="@drawable/border"/>
 
-
-    <RelativeLayout
-        android:id="@+id/layoutShow"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvToday"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="0dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="76dp"
-        tools:layout_editor_absoluteY="143dp"
-        android:layout_marginBottom="20dp"
-        >
-
-        <ImageView
-            android:id="@+id/imgToday"
-            android:layout_width="133dp"
-            android:layout_height="65dp"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/ic_cloud" />
-
-        <TextView
-            android:id="@+id/txtTemperatureToday"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/imgToday"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="177dp"
-            android:layout_marginLeft="39dp"
-            android:layout_marginTop="-5dp"
-            android:layout_marginEnd="178dp"
-            android:text="40"
-            android:textColor="@color/black"
-            android:textSize="50dp" />
-
-        <TextView
-            android:id="@+id/txtStatusToday"
-            android:layout_width="72dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txtTemperatureToday"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="175dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginEnd="164dp"
-            android:text="Cloudy"
-            android:textSize="20dp" />
-
-    </RelativeLayout>
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/layoutShow"
-        android:background="@color/grey">
-
+        android:layout_below="@+id/tvToday"
+        >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Cloudy"
-    android:textSize="20dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cloudy"
-                android:textSize="20dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cloudy"
-                android:textSize="20dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cloudy"
-                android:textSize="20dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cloudy"
-                android:textSize="20dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cloudy"
-                android:textSize="20dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cloudy"
-                android:textSize="20dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cloudy"
-                android:textSize="20dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cloudy"
-                android:textSize="20dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cloudy"
-                android:textSize="20dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cloudy"
-                android:textSize="20dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cloudy"
-                android:textSize="20dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cloudy"
-                android:textSize="20dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cloudy"
-                android:textSize="20dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cloudy"
-                android:textSize="20dp" /> <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cloudy"
-            android:textSize="20dp" /> <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Cloudy"
-            android:textSize="20dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cloudy"
-                android:textSize="20dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cloudy"
-                android:textSize="20dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cloudy"
-                android:textSize="20dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cloudy"
-                android:textSize="20dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cloudy"
-                android:textSize="20dp" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Cloudy"
-                android:textSize="20dp" />
 
+            <RelativeLayout
+                android:id="@+id/layoutShow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvToday"
+                android:layout_alignParentStart="true"
 
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="76dp"
+                tools:layout_editor_absoluteY="143dp"
+                android:layout_marginBottom="20dp"
 
+                >
 
+                <ImageView
+                    android:id="@+id/imgToday"
+                    android:layout_width="133dp"
+                    android:layout_height="65dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_cloud" />
+
+                <TextView
+                    android:id="@+id/txtTemperatureToday"
+                    android:layout_width="146dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgToday"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="134dp"
+                    android:layout_marginLeft="39dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="131dp"
+                    android:text="40"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="50dp" />
+
+                <TextView
+                    android:id="@+id/txtStatusToday"
+                    android:layout_width="227dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txtTemperatureToday"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="92dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginEnd="92dp"
+                    android:text="Cloudy"
+                    android:textAlignment="center"
+                    android:textSize="20dp" />
+                <TextView
+                    android:id="@+id/txtTodayCity"
+                    android:layout_below="@+id/txtStatusToday"
+                    android:layout_width="227dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="92dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginEnd="92dp"
+                    android:text="asdf"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="55dp"
+                android:orientation="horizontal"
+
+                android:paddingVertical="15dp"
+                android:background="@drawable/border"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="164dp"
+                    android:layout_height="match_parent"
+                    android:text="Real Feel"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/txtRealFeel_Today"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="RealFeel"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="55dp"
+                android:orientation="horizontal"
+
+                android:paddingVertical="15dp"
+                android:background="@drawable/border"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="164dp"
+                    android:layout_height="match_parent"
+                    android:text="Humidity"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/txtHumidityToday"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Humidity"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="55dp"
+                android:orientation="horizontal"
+
+                android:paddingVertical="15dp"
+                android:background="@drawable/border"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="164dp"
+                    android:layout_height="match_parent"
+                    android:text="Indoor Humidity"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/txtIndoorHumidityToday"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Indoor Humidity"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="55dp"
+                android:orientation="horizontal"
+
+                android:paddingVertical="15dp"
+                android:background="@drawable/border"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="164dp"
+                    android:layout_height="match_parent"
+                    android:text="Wind Speed"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/txtWinSpeedToday"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Wind Speed"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="350dp"
+                android:layout_height="55dp"
+                android:orientation="horizontal"
+
+                android:paddingVertical="15dp"
+                android:background="@drawable/border"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="164dp"
+                    android:layout_height="match_parent"
+                    android:text="Visibility"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/txtVisibilityToday"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Visibility"
+                    android:gravity="right"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

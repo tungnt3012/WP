@@ -4,10 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.Fragment_Today">
+    tools:context=".Fragments.Fragment_Search"
+    android:id="@+id/fragmentSearch">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/txtViewSearch"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -24,12 +26,40 @@
         app:layout_constraintTop_toTopOf="parent"
         />
 
-    <LinearLayout
-        android:id="@+id/layout"
+<!--    <AutoCompleteTextView-->
+<!--        android:id="@+id/txtAutoComplete"-->
+<!--        android:layout_below="@+id/txtViewSearch"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp" />-->
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/txtInputSearch"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/txtViewSearch"
+        android:background="@drawable/full_border"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="20dp"
+        android:hint="Enter a location"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSearch"
+        android:layout_below="@+id/txtInputSearch"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:text="Search"/>
+
+    <ListView
+        android:id="@+id/listSearch"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="76dp"
-        tools:layout_editor_absoluteY="143dp"></LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSearch"/>
+
+
+
+
 
 </RelativeLayout>
