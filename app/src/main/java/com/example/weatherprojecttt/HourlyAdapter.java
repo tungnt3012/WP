@@ -8,14 +8,16 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.weatherprojecttt.Fragments.Fragment_Hour;
+
 import java.util.ArrayList;
 
 public class HourlyAdapter extends RecyclerView.Adapter<HourlyAdapter.ViewHolder> {
 
-    private Context context;
+    private Fragment_Hour context;
     private ArrayList<Hourly> hourlies;
 
-    public HourlyAdapter(Context context, ArrayList<Hourly> hourlies){
+    public HourlyAdapter(Fragment_Hour context, ArrayList<Hourly> hourlies){
         this.context = context;
         this.hourlies = hourlies;
     }
@@ -35,7 +37,7 @@ public class HourlyAdapter extends RecyclerView.Adapter<HourlyAdapter.ViewHolder
 
     @Override
     public HourlyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        LayoutInflater inflater = LayoutInflater.from(context);
+        LayoutInflater inflater = LayoutInflater.from(context.getActivity());
         View hourlyView = inflater.inflate(R.layout.hourly_item,parent,false);
         ViewHolder viewHolder = new ViewHolder(hourlyView);
         return viewHolder;
@@ -45,9 +47,9 @@ public class HourlyAdapter extends RecyclerView.Adapter<HourlyAdapter.ViewHolder
     public void onBindViewHolder(HourlyAdapter.ViewHolder holder, int position) {
         Hourly hourly = hourlies.get(position);
         holder.txtHour.setText(hourly.getHour());
-        holder.txtTemperature.setText(Integer.toString(hourly.getTemperature()));
+        holder.txtTemperature.setText(hourly.getTemperature());
         holder.txtFeeling.setText(hourly.getFeeling());
-        holder.txtHumidity.setText(Integer.toString(hourly.getHumidity()));
+        holder.txtHumidity.setText(hourly.getHumidity());
     }
 
     @Override

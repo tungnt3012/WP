@@ -7,8 +7,15 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.weatherprojecttt.Hourly;
+import com.example.weatherprojecttt.HourlyAdapter;
 import com.example.weatherprojecttt.R;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,8 +23,12 @@ import com.example.weatherprojecttt.R;
  * create an instance of this fragment.
  */
 public class Fragment_Hour extends Fragment {
-    TextView title;
-    View mView;
+
+    private ArrayList<Hourly> hourlies;
+    private RecyclerView recyclerView;
+    private HourlyAdapter hourlyAdapter;
+    private BottomSheetBehavior bottomSheetBehavior;
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -62,13 +73,17 @@ public class Fragment_Hour extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        mView =  inflater.inflate(R.layout.fragment__hour, container, false);
-        title = mView.findViewById(R.id.titleHour);
-
-        return mView;
+        View v;
+        v = inflater.inflate(R.layout.fragment__hour, container, false);
+        hourlies = new ArrayList<>();
+        recyclerView = v.findViewById(R.id.hourlyRV);
+        View bottomsheet = v.findViewById(R.id.bottomSheet);
+        bottomSheetBehavior = BottomSheetBehavior.from(bottomsheet);
+        bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+        hourlyAdapter = new HourlyAdapter(this,hourlies);
+        recyclerView.setAdapter(hourlyAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        return v;
     }
 
-    public void setTitle (String txt) {
-        title.setText(txt);
-    }
 }
